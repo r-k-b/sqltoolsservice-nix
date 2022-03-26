@@ -1,0 +1,27 @@
+Index: scripts/cake-bootstrap.sh
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/scripts/cake-bootstrap.sh b/scripts/cake-bootstrap.sh
+--- a/scripts/cake-bootstrap.sh	(revision eab90266ef8321ee5838bba3f63723f96d93669d)
++++ b/scripts/cake-bootstrap.sh	(date 1647164232951)
+@@ -36,14 +36,10 @@
+   mkdir "$TOOLS_DIR"
+ fi
+ 
+-# Download NuGet if it does not exist.
+-if [ ! -f "$NUGET_EXE" ]; then
+-    echo "Downloading NuGet..."
+-    curl -Lsfo "$NUGET_EXE" https://dist.nuget.org/win-x86-commandline/v3.3.0/nuget.exe
+-    if [ $? -ne 0 ]; then
+-        echo "An error occured while downloading nuget.exe."
+-        exit 1
+-    fi
++# Error if NuGet isn't linked.
++if [ ! -L "$NUGET_EXE" ]; then
++    echo "NuGet isn't linked from the .tools folder; cannot continue."
++    exit 1
+ fi
+ 
+ # Restore tools from NuGet.

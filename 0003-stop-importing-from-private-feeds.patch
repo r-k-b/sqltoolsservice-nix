@@ -1,0 +1,46 @@
+Index: Packages.props
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Packages.props b/Packages.props
+--- a/Packages.props	(revision b1829b1a95da38bcd805f0bc039f8821d18ddb8d)
++++ b/Packages.props	(date 1648263388976)
+@@ -25,7 +25,6 @@
+ 		<PackageReference Update="Microsoft.Azure.Kusto.Data" Version="9.0.4" />
+ 		<PackageReference Update="Microsoft.Azure.Kusto.Language" Version="9.0.4"/>
+ 		<PackageReference Update="Microsoft.SqlServer.Assessment"  Version="[1.0.305]" />
+-		<PackageReference Update="Microsoft.SqlServer.Migration.Assessment"  Version="1.0.20220211.24" />
+ 		<PackageReference Update="Microsoft.SqlServer.Management.SqlParser" Version="160.22503.0" />
+ 		<PackageReference Update="Microsoft.Azure.OperationalInsights" Version="1.0.0" />
+ 		<PackageReference Update="Microsoft.CodeAnalysis.CSharp" Version="3.10.0" />
+@@ -39,6 +38,5 @@
+ 		<PackageReference Update="xunit" Version="2.4.1" />
+ 		<PackageReference Update="xunit.runner.visualstudio" Version="2.4.1" />
+ 		<PackageReference Update="Microsoft.NET.Test.Sdk" Version="16.6.1" />
+-		<PackageReference Update="Microsoft.SqlServer.TransactSql.ScriptDom.NRT" Version="1.2.10202.1" />
+ 	</ItemGroup>
+-</Project>
+\ No newline at end of file
++</Project>
+Index: src/Microsoft.SqlTools.ServiceLayer/Microsoft.SqlTools.ServiceLayer.csproj
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Microsoft.SqlTools.ServiceLayer/Microsoft.SqlTools.ServiceLayer.csproj b/src/Microsoft.SqlTools.ServiceLayer/Microsoft.SqlTools.ServiceLayer.csproj
+--- a/src/Microsoft.SqlTools.ServiceLayer/Microsoft.SqlTools.ServiceLayer.csproj	(revision b1829b1a95da38bcd805f0bc039f8821d18ddb8d)
++++ b/src/Microsoft.SqlTools.ServiceLayer/Microsoft.SqlTools.ServiceLayer.csproj	(date 1648263388965)
+@@ -28,12 +28,8 @@
+ 		<PackageReference Include="Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider" />
+ 		<PackageReference Include="System.Text.Encoding.CodePages" />
+ 		<PackageReference Include="Microsoft.SqlServer.Assessment" />
+-		<PackageReference Include="Microsoft.SqlServer.Migration.Assessment" />
+ 		<PackageReference Include="Microsoft.SqlServer.Management.SqlParser"/>
+ 		<PackageReference Include="System.Text.Encoding.CodePages" />
+-		<PackageReference Include="Microsoft.SqlServer.TransactSql.ScriptDom.NRT">
+-			<Aliases>ASAScriptDom</Aliases>
+-		</PackageReference>
+ 	</ItemGroup>
+ 	<ItemGroup>
+ 		<Compile Include="**\*.cs" Exclude="**/obj/**/*.cs" />
