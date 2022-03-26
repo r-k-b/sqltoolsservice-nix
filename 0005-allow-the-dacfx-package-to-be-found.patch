@@ -1,0 +1,75 @@
+Index: src/Microsoft.Kusto.ServiceLayer/Microsoft.Kusto.ServiceLayer.csproj
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Microsoft.Kusto.ServiceLayer/Microsoft.Kusto.ServiceLayer.csproj b/src/Microsoft.Kusto.ServiceLayer/Microsoft.Kusto.ServiceLayer.csproj
+--- a/src/Microsoft.Kusto.ServiceLayer/Microsoft.Kusto.ServiceLayer.csproj	(revision 87fdf762d3d2d79854be5e98be16359d6263a74c)
++++ b/src/Microsoft.Kusto.ServiceLayer/Microsoft.Kusto.ServiceLayer.csproj	(date 1648281666420)
+@@ -23,7 +23,7 @@
+
+   <ItemGroup>
+     <PackageReference Include="Microsoft.Azure.OperationalInsights" />
+-    <PackageReference Include="Microsoft.SqlServer.DACFx" />
++    <PackageReference Include="Microsoft.SqlServer.DACFx" Version="160.*-*" />
+     <PackageReference Include="System.Text.Encoding.CodePages" />
+     <PackageReference Include="Microsoft.Azure.Kusto.Data" />
+     <PackageReference Include="System.Net.Http" />
+Index: src/Microsoft.SqlTools.ServiceLayer/Microsoft.SqlTools.ServiceLayer.csproj
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Microsoft.SqlTools.ServiceLayer/Microsoft.SqlTools.ServiceLayer.csproj b/src/Microsoft.SqlTools.ServiceLayer/Microsoft.SqlTools.ServiceLayer.csproj
+--- a/src/Microsoft.SqlTools.ServiceLayer/Microsoft.SqlTools.ServiceLayer.csproj	(revision 87fdf762d3d2d79854be5e98be16359d6263a74c)
++++ b/src/Microsoft.SqlTools.ServiceLayer/Microsoft.SqlTools.ServiceLayer.csproj	(date 1648281666423)
+@@ -24,7 +24,7 @@
+ 		<PackageReference Include="Microsoft.CodeAnalysis.CSharp" />
+ 		<PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" />
+ 		<PackageReference Include="Microsoft.CodeAnalysis.Workspaces.Common" />
+-		<PackageReference Include="Microsoft.SqlServer.DACFx" />
++		<PackageReference Include="Microsoft.SqlServer.DACFx" Version="160.*-*" />
+ 		<PackageReference Include="Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider" />
+ 		<PackageReference Include="System.Text.Encoding.CodePages" />
+ 		<PackageReference Include="Microsoft.SqlServer.Assessment" />
+Index: src/Microsoft.SqlTools.ResourceProvider.DefaultImpl/Microsoft.SqlTools.ResourceProvider.DefaultImpl.csproj
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Microsoft.SqlTools.ResourceProvider.DefaultImpl/Microsoft.SqlTools.ResourceProvider.DefaultImpl.csproj b/src/Microsoft.SqlTools.ResourceProvider.DefaultImpl/Microsoft.SqlTools.ResourceProvider.DefaultImpl.csproj
+--- a/src/Microsoft.SqlTools.ResourceProvider.DefaultImpl/Microsoft.SqlTools.ResourceProvider.DefaultImpl.csproj	(revision 87fdf762d3d2d79854be5e98be16359d6263a74c)
++++ b/src/Microsoft.SqlTools.ResourceProvider.DefaultImpl/Microsoft.SqlTools.ResourceProvider.DefaultImpl.csproj	(date 1648281919572)
+@@ -12,13 +12,13 @@
+     <Copyright>� Microsoft Corporation. All rights reserved.</Copyright>
+   </PropertyGroup>
+   <ItemGroup>
+-    <PackageReference Include="Microsoft.Azure.Management.ResourceManager" />
++    <PackageReference Include="Microsoft.Azure.Management.ResourceManager" Version="3.*-*" />
+     <PackageReference Include="Microsoft.Rest.ClientRuntime" />
+     <PackageReference Include="Microsoft.Rest.ClientRuntime.Azure" />
+     <PackageReference Include="Microsoft.Extensions.DependencyModel" />
+     <PackageReference Include="System.Runtime.Loader" />
+     <PackageReference Include="System.Composition"/>
+-    <PackageReference Include="Microsoft.Azure.Management.Sql"/>
++    <PackageReference Include="Microsoft.Azure.Management.Sql" Version="1.*-*" />
+   </ItemGroup>
+   <ItemGroup>
+     <ProjectReference Include="..\Microsoft.SqlTools.ResourceProvider.Core\Microsoft.SqlTools.ResourceProvider.Core.csproj" />
+Index: src/Microsoft.SqlTools.ManagedBatchParser/Microsoft.SqlTools.ManagedBatchParser.csproj
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Microsoft.SqlTools.ManagedBatchParser/Microsoft.SqlTools.ManagedBatchParser.csproj b/src/Microsoft.SqlTools.ManagedBatchParser/Microsoft.SqlTools.ManagedBatchParser.csproj
+--- a/src/Microsoft.SqlTools.ManagedBatchParser/Microsoft.SqlTools.ManagedBatchParser.csproj	(revision 87fdf762d3d2d79854be5e98be16359d6263a74c)
++++ b/src/Microsoft.SqlTools.ManagedBatchParser/Microsoft.SqlTools.ManagedBatchParser.csproj	(date 1648281666416)
+@@ -10,7 +10,7 @@
+ 	</ItemGroup>
+ 	<ItemGroup>
+ 		<PackageReference Include="Microsoft.Data.SqlClient" />
+-        <PackageReference Include="Microsoft.SqlServer.DACFx" />
++        <PackageReference Include="Microsoft.SqlServer.DACFx" Version="160.*-*" />
+ 		<PackageReference Include="Microsoft.SqlServer.SqlManagementObjects" />
+ 	</ItemGroup>
+ 	<ItemGroup>

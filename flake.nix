@@ -75,6 +75,15 @@
                those packages?
             */
             ./0004-dont-bother-with-other-target-runtimes.patch
+
+            /* Bug with "preview" nuget packages & nuget-to-nix?
+
+               error NU1103: Unable to find a stable package Microsoft.SqlServer.DacFx with version  [/build/source/sqltoolsservice.sln]
+               error NU1103:   - Found 1 version(s) in /nix/store/07g76wxd9n58c0ba7zk3bmr25yhffbcc-sqltoolsservice-nuget-source/lib [ Nearest version: 160.6057.0-preview ] [/build/source/sqltoolsservice.sln]
+
+               https://stackoverflow.com/a/69926686/2014893
+            */
+            ./0005-allow-the-dacfx-package-to-be-found.patch
           ];
 
           # configurePhase = ...
