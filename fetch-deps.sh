@@ -43,4 +43,4 @@ echo Dependencies fetched.
 
 # within-nixpkgs things
 popd
-rm -r "$src"
+rm -rf "$src"
