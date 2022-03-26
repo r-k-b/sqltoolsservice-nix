@@ -88,12 +88,7 @@
             ./build.sh
           '';
 
-          installPhase = ''
-            mkdir -p $out/bin
-            touch $out/bin fixme
-            echo fixme
-            exit 42
-          '';
+          # installPhase is handled by `buildDotnetModule`
 
           #passthru = { exePath = "/bin/frink-cli.sh"; };
 
