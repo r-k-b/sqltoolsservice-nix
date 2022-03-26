@@ -21,6 +21,7 @@ nuget_tmp="$(mktemp -d)"
 clean_up() {
   echo Cleaning up.
   rm -rf "$nuget_tmp"
+  rm -rf "$src"
 }
 trap clean_up EXIT
 echo nuget tmp: "$nuget_tmp"
@@ -43,4 +44,3 @@ echo Dependencies fetched.
 
 # within-nixpkgs things
 popd
-rm -rf "$src"
