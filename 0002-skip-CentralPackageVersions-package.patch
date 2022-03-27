@@ -1,0 +1,14 @@
+Index: Directory.Build.targets
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Directory.Build.targets b/Directory.Build.targets
+--- a/Directory.Build.targets	(revision 87fdf762d3d2d79854be5e98be16359d6263a74c)
++++ b/Directory.Build.targets	(date 1648343179299)
+@@ -1,5 +1,4 @@
+ <Project>
+-  <Sdk Name="Microsoft.Build.CentralPackageVersions" Version="2.0.52" />
+   <!-- Need full debugtype for code coverage -->
+ 	<PropertyGroup Condition="'$(Configuration)' == 'Debug' and ('$(BuildingInsideVisualStudio)' != '' or '$(CodeCoverageBuild)' == 'true')">
+ 		<DebugType>full</DebugType>

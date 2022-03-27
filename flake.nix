@@ -67,6 +67,10 @@
           patches = [
             ./0001-use_nuget_from_the_nix_store.patch
 
+            # /build/source/Directory.Build.targets : error : Unable to find package Microsoft.Build.CentralPackageVersions. No packages exist with this id in source(s): Local Packages, nuget.org
+            # (why doesn't nuget-to-nix include `Microsoft.Build.CentralPackageVersions`?)
+            ./0002-skip-CentralPackageVersions-package.patch
+
             # https://github.com/microsoft/sqltoolsservice/issues/1173
             ./0003-stop-importing-from-private-feeds.patch
 
