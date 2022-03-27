@@ -9,4 +9,4 @@
 - change the `version` tag in `./flake.nix`
 - update the hash
 - (maybe fix the patch files?)
-- run `./fetch-deps.sh`
+- run `fetch-deps` inside `nix develop`
