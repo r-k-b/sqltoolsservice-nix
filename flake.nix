@@ -117,10 +117,9 @@
           name = "sqltoolsservice-nix-shell";
 
           buildInputs = [
-            (import ./fetch-deps.nix {
-              writeScriptBin = pkgs.writeScriptBin;
-              inherit dotnet;
-            })
+            (pkgs.runCommand "fetch-deps" { preferLocalBuild = true; } ''
+              install -D -m755 ${./fetch-deps.sh} $out/bin/fetch-deps
+            '')
             dotnet.sdk
             nuget
             pkgs.nuget-to-nix
