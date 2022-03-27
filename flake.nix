@@ -94,8 +94,9 @@
           # good reference? https://github.com/NixOS/nixpkgs/blob/81eb599e8d662940f451aee1f6fcb3af24c1b655/pkgs/servers/jellyfin/default.nix#L73-L83
 
           buildPhase = ''
+            cp ${./standardizeCase.sh} ./standardizeCase.sh
             patchShebangs ./
-            ${./standardizeCase.sh}
+            ./standardizeCase.sh
             mkdir -p ./.tools
             ln -s ${nuget}/lib/dotnet/Nuget/nuget.exe ./.tools/nuget.exe
             ./build.sh
