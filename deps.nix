@@ -15,6 +15,11 @@
     sha256 = "1vzipy44nniifikll12crc6h4n6abyda4zswxywy76i4w9k6hqdn";
   })
   (fetchNuGet {
+    pname = "Cake";
+    version = "0.37.0";
+    sha256 = "0cqiljrc1yz565y1v0hkdr49ahgy98mxl2idxbvx45lsgpxdlplj";
+  })
+  (fetchNuGet {
     pname = "Castle.Core";
     version = "4.2.1";
     sha256 = "18qbjsaah23jg9r24wjcy4jlggbz1dq6sw621d8314jhyhjxvw0l";
@@ -178,6 +183,11 @@
     pname = "Microsoft.Data.SqlClient.SNI.runtime";
     version = "3.0.0";
     sha256 = "17bq3wim22pvjzmbpdy9h4v07shhrpzy4z44cv843bhz5k31rqv4";
+  })
+  (fetchNuGet {
+    pname = "Microsoft.Data.Tools.StringResourceTool";
+    version = "3.1.0";
+    sha256 = "0mpvssilj9g56mqwhszk0kka47ls8dv9wl5y5k6yfmwa5hd1bxgl";
   })
   (fetchNuGet {
     pname = "Microsoft.DotNet.InternalAbstractions";
@@ -425,9 +435,24 @@
     sha256 = "0pjll2a62hc576hd4wgyasva0lp733yllmk54n37svz5ac7nfz0q";
   })
   (fetchNuGet {
+    pname = "Mono.TextTransform";
+    version = "1.0.0";
+    sha256 = "17hs27agqqab3lb5b33nk4gjmc52ip7nv2z68d9fxr5b301f8ns7";
+  })
+  (fetchNuGet {
     pname = "Moq";
     version = "4.8.2";
     sha256 = "081qp2rk8qgvpvybspjqlgvs933hmlry7bhql076d7iqx5x4klbq";
+  })
+  (fetchNuGet {
+    pname = "mssql.ResX";
+    version = "0.2.0";
+    sha256 = "1vnkqqdj05k68sdb4k6yxlnqnkxwfm0zlsnr5bxjzmhikvd6whbn";
+  })
+  (fetchNuGet {
+    pname = "mssql.XliffParser";
+    version = "0.5.3";
+    sha256 = "07r3qx82h1fmlhxrrca2izhlnanpz53nn0jf1bcvs5y77215ig0n";
   })
   (fetchNuGet {
     pname = "NETStandard.Library";
@@ -453,6 +478,11 @@
     pname = "Newtonsoft.Json";
     version = "11.0.1";
     sha256 = "1z68j07if1xf71lbsrgbia52r812i2dv541sy44ph4dzjjp7pd4m";
+  })
+  (fetchNuGet {
+    pname = "Newtonsoft.Json";
+    version = "12.0.3";
+    sha256 = "17dzl305d835mzign8r15vkmav2hq8l6g7942dfjpnzr17wwl89x";
   })
   (fetchNuGet {
     pname = "Newtonsoft.Json";
@@ -1969,6 +1999,11 @@
     pname = "xunit.extensibility.execution";
     version = "2.4.1";
     sha256 = "1pbilxh1gp2ywm5idfl0klhl4gb16j86ib4x83p8raql1dv88qia";
+  })
+  (fetchNuGet {
+    pname = "xunit.runner.console";
+    version = "2.4.1";
+    sha256 = "13ykz9anhz72xc4q6byvdfwrp54hlcbl6zsfapwfhnzyvfgb9w13";
   })
   (fetchNuGet {
     pname = "xunit.runner.visualstudio";

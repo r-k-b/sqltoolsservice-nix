@@ -122,8 +122,10 @@
               inherit dotnet;
             })
             dotnet.sdk
+            nuget
             pkgs.nuget-to-nix
             pkgs.nixfmt
+            pkgs.unzip
           ];
 
           shellHook = ''

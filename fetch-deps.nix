@@ -39,6 +39,17 @@
   echo Restoring...
   dotnet restore sqltoolsservice.sln --packages "$nuget_tmp"
 
+  # do what `scripts/cake-bootstrap.ps1` does, so we can grab the 'hidden'
+  # dependencies in `scripts/packages.config`...
+  pushd scripts
+  nuget restore ./packages.config -OutputDirectory "$nuget_tmp"
+  # `nuget restore` doesn't extract the *.nuspec files, so nuget-to-nix is blind
+  # to those packages...
+  pushd "$nuget_tmp"
+  find . -type f -name *.nupkg -execdir sh -c 'unzip -n *.nupkg *.nuspec' ';'
+  popd
+  popd
+
   echo nuget-to-nix...
   nuget-to-nix "$nuget_tmp" > "$deps_file"
   nixfmt "$deps_file"
