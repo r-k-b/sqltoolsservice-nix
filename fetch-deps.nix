@@ -46,7 +46,7 @@
   # `nuget restore` doesn't extract the *.nuspec files, so nuget-to-nix is blind
   # to those packages...
   pushd "$nuget_tmp"
-  find . -type f -name *.nupkg -execdir sh -c 'unzip -n *.nupkg *.nuspec' ';'
+  find . -type f -name *.nupkg -execdir sh -c 'unzip -n *.nupkg *.nuspec' ';' | grep inflating
   popd
   popd
 
