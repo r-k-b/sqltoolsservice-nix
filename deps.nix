@@ -445,16 +445,6 @@
     sha256 = "081qp2rk8qgvpvybspjqlgvs933hmlry7bhql076d7iqx5x4klbq";
   })
   (fetchNuGet {
-    pname = "mssql.ResX";
-    version = "0.2.0";
-    sha256 = "1vnkqqdj05k68sdb4k6yxlnqnkxwfm0zlsnr5bxjzmhikvd6whbn";
-  })
-  (fetchNuGet {
-    pname = "mssql.XliffParser";
-    version = "0.5.3";
-    sha256 = "07r3qx82h1fmlhxrrca2izhlnanpz53nn0jf1bcvs5y77215ig0n";
-  })
-  (fetchNuGet {
     pname = "NETStandard.Library";
     version = "1.6.1";
     sha256 = "1z70wvsx2d847a2cjfii7b83pjfs34q05gb037fdjikv5kbagml8";
@@ -478,11 +468,6 @@
     pname = "Newtonsoft.Json";
     version = "11.0.1";
     sha256 = "1z68j07if1xf71lbsrgbia52r812i2dv541sy44ph4dzjjp7pd4m";
-  })
-  (fetchNuGet {
-    pname = "Newtonsoft.Json";
-    version = "12.0.3";
-    sha256 = "17dzl305d835mzign8r15vkmav2hq8l6g7942dfjpnzr17wwl89x";
   })
   (fetchNuGet {
     pname = "Newtonsoft.Json";
@@ -1322,11 +1307,6 @@
   })
   (fetchNuGet {
     pname = "System.IO.FileSystem.Primitives";
-    version = "4.0.1";
-    sha256 = "1s0mniajj3lvbyf7vfb5shp4ink5yibsx945k6lvxa96r8la1612";
-  })
-  (fetchNuGet {
-    pname = "System.IO.FileSystem.Primitives";
     version = "4.3.0";
     sha256 = "0j6ndgglcf4brg2lz4wzsh1av1gh8xrzdsn9f0yznskhqn1xzj9c";
   })
@@ -1617,18 +1597,8 @@
   })
   (fetchNuGet {
     pname = "System.Runtime.Handles";
-    version = "4.0.1";
-    sha256 = "1g0zrdi5508v49pfm3iii2hn6nm00bgvfpjq1zxknfjrxxa20r4g";
-  })
-  (fetchNuGet {
-    pname = "System.Runtime.Handles";
     version = "4.3.0";
     sha256 = "0sw2gfj2xr7sw9qjn0j3l9yw07x73lcs97p8xfc9w1x9h5g5m7i8";
-  })
-  (fetchNuGet {
-    pname = "System.Runtime.InteropServices";
-    version = "4.1.0";
-    sha256 = "01kxqppx3dr3b6b286xafqilv4s2n0gqvfgzfd4z943ga9i81is1";
   })
   (fetchNuGet {
     pname = "System.Runtime.InteropServices";
@@ -1804,11 +1774,6 @@
     pname = "System.Text.Encoding.CodePages";
     version = "4.7.1";
     sha256 = "1y1hdap9qbl7vp74j8s9zcbh3v1rnrrvcc55wj1hl6has2v3qh1r";
-  })
-  (fetchNuGet {
-    pname = "System.Text.Encoding.Extensions";
-    version = "4.0.11";
-    sha256 = "08nsfrpiwsg9x5ml4xyl3zyvjfdi4mvbqf93kjdh11j4fwkznizs";
   })
   (fetchNuGet {
     pname = "System.Text.Encoding.Extensions";

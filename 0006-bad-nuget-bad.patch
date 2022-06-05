@@ -1,0 +1,17 @@
+Index: nuget.config
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/nuget.config b/nuget.config
+--- a/nuget.config	(revision 87fdf762d3d2d79854be5e98be16359d6263a74c)
++++ b/nuget.config	(date 1648366703170)
+@@ -2,7 +2,6 @@
+ <configuration>
+   <packageSources>
+     <clear />
+-    <add key="nuget.org" value="https://api.nuget.org/v3/index.json" protocolVersion="3" />
+     <add key="Local Packages" value="./bin/nuget" />
+   </packageSources>
+ </configuration>
+\ No newline at end of file

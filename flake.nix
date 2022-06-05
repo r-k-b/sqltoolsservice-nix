@@ -1,5 +1,5 @@
 {
-  description = "phdsysnet";
+  description = "sqltoolsservice";
 
   inputs = { flake-utils.url = "github:numtide/flake-utils"; };
 
@@ -25,6 +25,18 @@
         nuget = pkgs.dotnetPackages.Nuget;
 
         dotnet = (import ./dotnet-exact.nix) { inherit pkgs; };
+
+        cakeDepSource = pkgs.mkNugetSource {
+          name = "cake-deps-nuget-source";
+          description =
+            "A Nuget source with the dependencies for teh Cake build of the STS";
+          deps = [
+            (pkgs.mkNugetDeps {
+              name = "cake-deps-nuget-deps";
+              nugetDeps = import ./deps.nix;
+            })
+          ];
+        };
 
         sqlTS = buildDotnetModule {
           pname = "sqltoolsservice";
@@ -58,6 +70,7 @@
             mono6
             nuget
             nuget-to-nix
+            tree
             which
           ];
 
@@ -74,12 +87,6 @@
             # https://github.com/microsoft/sqltoolsservice/issues/1173
             ./0003-stop-importing-from-private-feeds.patch
 
-            /* The build errors out when it tries to find the packages for
-               other platforms. Is there some way to make nuget-to-nix include
-               those packages?
-            */
-            ./0004-dont-bother-with-other-target-runtimes.patch
-
             /* Bug with "preview" nuget packages & nuget-to-nix?
 
                error NU1103: Unable to find a stable package Microsoft.SqlServer.DacFx with version  [/build/source/sqltoolsservice.sln]
@@ -88,6 +95,12 @@
                https://stackoverflow.com/a/69926686/2014893
             */
             ./0005-allow-the-dacfx-package-to-be-found.patch
+
+            # cake build tries to get on the internet?
+            ./0006-bad-nuget-bad.patch
+
+            # where are we up to in the log?
+            ./0007-cake-bootstrapper-waypoints.patch
           ];
 
           # configurePhase = ...
@@ -99,6 +112,22 @@
             ./standardizeCase.sh
             mkdir -p ./.tools
             ln -s ${nuget}/lib/dotnet/Nuget/nuget.exe ./.tools/nuget.exe
+            #echo "buildPhase::restore"
+            #dotnet restore --configfile ./nuget.config
+
+            #echo "________________________"
+            #echo "Content of HOME/.nuget :"
+            #tree -phugD $HOME/.nuget
+
+            #echo "________________________"
+            #echo "Content of ./bin/nuget :"
+            #tree -phugD  ./bin/nuget
+
+            echo "buildPhase::scripts-restore"
+            nuget restore ./scripts/packages.config -OutputDirectory $HOME/.nuget \
+                -Source ${cakeDepSource}/lib -Source ./bin/nuget
+
+            echo "buildPhase::build.sh"
             ./build.sh
           '';
 

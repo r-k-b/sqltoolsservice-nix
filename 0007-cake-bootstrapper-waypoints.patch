@@ -1,0 +1,35 @@
+Index: scripts/cake-bootstrap.sh
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/scripts/cake-bootstrap.sh b/scripts/cake-bootstrap.sh
+--- a/scripts/cake-bootstrap.sh	(revision 87fdf762d3d2d79854be5e98be16359d6263a74c)
++++ b/scripts/cake-bootstrap.sh	(date 1647164374565)
+@@ -18,6 +18,8 @@
+ SHOW_VERSION=false
+ SCRIPT_ARGUMENTS=()
+
++echo "This is cake-bootstrap.sh."
++
+ # Parse arguments.
+ for i in "$@"; do
+     case $1 in
+@@ -46,6 +48,8 @@
+     fi
+ fi
+
++echo "cake-bootstrap::restore-tools"
++
+ # Restore tools from NuGet.
+ pushd "$TOOLS_DIR" >/dev/null
+ mono "$NUGET_EXE" config -configfile ../nuget.config
+@@ -62,6 +66,8 @@
+     exit 1
+ fi
+
++echo "cake-bootstrap::start"
++
+ # Start Cake
+ if $SHOW_VERSION; then
+     exec mono "$CAKE_EXE" -version
